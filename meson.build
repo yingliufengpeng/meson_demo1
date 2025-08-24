@@ -20,7 +20,7 @@ gtest_dep = dependency('gtest', main : true, required : true) # 查找系统 GTe
 
 # 定义 Python 扩展模块
 python.extension_module(
-        'my_package',  # 模块名称，生成的 .so 文件将命名为 my_package.cpython-*.so
+        '_my_package',  # 模块名称，生成的 .so 文件将命名为 my_package.cpython-*.so
         sources: ['src/my_package/cpp/binding.cpp', 'src/my_package/cpp/my_code.cpp'],
         dependencies: [python_dep, pybind11_dep],
         install: true,

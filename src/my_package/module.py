@@ -1,5 +1,3 @@
 
 
-import _my_package
-
-_my_package.greet('fsf')
+from ._my_package import *
