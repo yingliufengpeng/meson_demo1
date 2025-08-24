@@ -6,7 +6,7 @@ project('my_project', 'cpp', version: '0.1.0',
 )
 
 # 查找 Python3 解释器和相关信息
-python = import('python').find_installation('python.exe', required: true)
+python = import('python').find_installation('python', required: true)
 python_dep = python.dependency()
 
 # 查找 pybind11（假设已安装）
