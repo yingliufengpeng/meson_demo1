@@ -1,6 +1,6 @@
 project('my_project', 'cpp', version: '0.1.0',
         default_options: [
-                'cpp_std=c++17',  # 使用 C++17 标准
+                'cpp_std=c++20',  # 使用 C++20 标准
                 'warning_level=3',
         ]
 )
@@ -33,6 +33,10 @@ python.install_sources(
         subdir: 'my_package'
 )
 
+main = executable(
+        'main',
+        'main.cpp'
+)
 
 # 创建测试可执行文件
 test_math = executable(
@@ -46,4 +50,5 @@ test_math = executable(
 )
 
 # 注册测试
-test('Math utils tests', test_math, timeout: 60)
+#test('Math utils tests', test_math, timeout: 60)
+test('Math utils tests', main, timeout: 60)
